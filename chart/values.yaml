@@ -36,16 +36,10 @@ securityContext: {}
   # runAsUser: 1000
 
 autoscaling:
-  enabled: true
-  maxReplicas: 5
-  minReplicas: 1
-  metrics:
-    - type: Resource
-      resource:
-        name: cpu
-        target:
-          type: Utilization
-          averageUtilization: 50
+  enabled: false
+  # targetCPUUtilizationPercentage: 50
+  # maxReplicas: 5
+  # minReplicas: 1
 
 service:
   type: ClusterIP

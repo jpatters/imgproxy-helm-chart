@@ -13,6 +13,5 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: {{ include "chart.fullname" . }}
-  metrics:
-    {{- toYaml .Values.autoscaling.metrics | nindent 4}}
+  targetCPUUtilizationPercentage: {{ .Values.autoscaling.targetCPUUtilizationPercentage }}
 {{- end }}
